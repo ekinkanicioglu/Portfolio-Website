@@ -1,30 +1,32 @@
-var express = require('express'); 
-var app = express(); 
+const express = require('express');
+const path = require('path');
+const app = express();
 
-// respond with "hello world" when a GET request is made to the homepage
+app.use(express.static(path.join(__dirname, 'app', 'views')));
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/app/views');
+
 app.get('/', (req, res) => {
-	res.render()
-  })
-app.get('/home', (req, res) => {
-	res.send('home')
-  })
-  app.get('/about', (req, res) => {
-    res.render()
-})
+  res.render('home');
+});
+
+app.get('/about', (req, res) => {
+  res.render('about');
+});
+
 app.get('/projects', (req, res) => {
-	res.send('projects')
-  })
+  res.send('Projects');
+});
+
 app.get('/services', (req, res) => {
-	res.send('services')
-  })
+  res.send('Services');
+});
+
 app.get('/contact', (req, res) => {
-	res.send('contact')
-  })
+  res.send('Contact');
+});
 
-
-
-
-  
-  app.listen(3000); 
-console.log('Server running at http://localhost:3000/'); 
-module.exports = app; 
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}/`);
+});
