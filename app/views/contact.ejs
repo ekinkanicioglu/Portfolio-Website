@@ -1,8 +1,22 @@
-<%- include('partials/header.ejs') %>
-<%- include('partials/nav.ejs') %>
+<%- include('partials/header.ejs' , {title : "Contact - Ekin Kanicioglu"}) %>
+<%- include('partials/nav.ejs',{pageTitle : "Contact"}) %>
 
 <body>
-    <br><br><br>
+    <form action="/submit-contact" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+      
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+      
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+      
+        <input type="submit" value="Submit">
+      </form>
 </body>
 
 <%- include('partials/footer.ejs') %>

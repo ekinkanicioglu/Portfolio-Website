@@ -1,23 +1,47 @@
+/* 
+styles.css
+Ekin Kanicioglu
+301306685
+10-07-2023 */
+
 body {
-    background-color: black;
-    color: white;
-  }
-  
-  .navbar {
-    display: flex;
-    align-items: center; /* Center the nav items vertically */
-    padding: 25px; 
-  }
-  
-  .navlink {
-    color: lightgray; 
-    text-decoration: none; 
-    margin-right: 30px; 
-    margin-left:30px;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .navlink:hover {
-    color: white; 
-  }
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 200px;
+  width :950px;
+  padding-bottom: 100px;
+
+}
+
+.navbar {
+  display: flex;
+  align-items: center; 
+  padding: 25px; 
+}
+
+.navlink {
+  color: lightgray; 
+  text-decoration: none; 
+  margin-right: 30px; 
+  margin-left:30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.navlink:hover {
+  color: white; 
+}
+.missionStatement{
+ 
+}
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  padding-top: 100px;
+}
